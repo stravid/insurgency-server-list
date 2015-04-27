@@ -1,0 +1,48 @@
+body {
+  color: #111111;
+  padding-bottom: 2em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+table {
+  font-size: 12px;
+  border-collapse: collapse;
+  line-height: 1.5;
+}
+
+thead {
+  background-color: #aaaaaa;
+}
+
+th {
+  font-size: 14px;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+td {
+  border-bottom: 1px solid #aaaaaa;
+  padding: 5px 10px;
+}
+
+tbody tr:hover {
+  background-color: #dddddd;
+}
+
+.players {
+  text-align: center;
+}
+
+.updated-at {
+  text-align: right;
+}
+
+.server-list-container {
+  float: left;
+  width: 75%;
+}
+
+.server-filter-container {
+  float: left;
+  width: 25%;
+}

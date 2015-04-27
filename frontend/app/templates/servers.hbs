@@ -1,0 +1,42 @@
+<div class="server-list-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Server</th>
+        <th>Players</th>
+        <th>Map</th>
+        <th>Mode</th>
+        <th>Last Update</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each server in filteredServers}}
+      <tr>
+        <td>{{server.name}}</td>
+        <td class="players">{{server.numberOfPlayers}}/{{server.maximumNumberOfPlayers}}</td>
+        <td>{{server.mapName}}</td>
+        <td>{{server.gameMode}}</td>
+        <td class="updated-at">{{server.relativeUpdatedAt}}</td>
+        <td><a href="{{server.joinURL}}">Join</a></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<div class="server-filter-container">
+  <h2>Server Filter</h2>
+
+  <label>Modes:</label>
+  {{multiselect-checkboxes options=gameModeOptions selection=selectedGameModes}}
+
+  <label>Maps:</label>
+  {{multiselect-checkboxes options=mapOptions selection=selectedMaps}}
+
+  <label>Free Slots:</label>
+  {{multiselect-checkboxes options=freeSlotOptions selection=selectedFreeSlots labelProperty="label"}}
+
+  <label>
+    Show empty: {{input type="checkbox" checked=showEmptyServers}}
+  </label>
+</div>
