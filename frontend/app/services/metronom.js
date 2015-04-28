@@ -7,6 +7,6 @@ export default Ember.Service.extend({
   tick: function () {
     Ember.run.later(function () {
       this.incrementProperty('_counter');
-    }.bind(this), 5000);
+    }.bind(this), 1000);
   }.observes('_counter').on('init')
 });
